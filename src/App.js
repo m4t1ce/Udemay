@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React,{Component} from "react"
+import Projects from './Projects'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// class RegularClass{}
+// class ComponentClass extends Component{}
+// const RegularClassInstance=new RegularClass()
+// const ComponentClassInstance=new ComponentClass()
+// console.log('RegularClassInstance',RegularClassInstance)
+// console.log('ComponentClassInstance',ComponentClassInstance)
+
+class App extends Component {
+    state={displayBio:false};
+
+    toggleDisplayBio=()=>{
+        this.setState({displayBio: !this.state.displayBio})
+    }
+
+    render(){
+
+        return(
+            <div>
+                <h1>Hello!</h1>
+                <p>I am Mateu</p>
+                <p>I will take any job as junior developer</p>
+
+                {
+                    this.state.displayBio ? (
+            <div>
+                <p>I live in Poland</p>
+                <p>Like to code in java, my first language was C</p>
+                <p>I am learning mainstream languages</p>
+                <button onClick={this.toggleDisplayBio}>Show less</button>
+            </div>
+        ) : (
+            <div>
+                <button onClick={this.toggleDisplayBio}>Read more</button>
+            </div>
+        )
+        }
+           
+        <hr />
+        <Projects />
+        </div>
+        )
+    }
+    
 }
 
-export default App;
+export default App
