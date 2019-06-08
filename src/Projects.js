@@ -9,7 +9,7 @@ class Project extends Component{
         return(
             <div >
                 <h3>{title}</h3>
-                <img src={image} alt='profile'/>
+                <img src={image} alt='profile'style={{width:500,height:300}}/>
                 <p>{description}</p>
                 <a href={link}>{link}</a>
             </div>

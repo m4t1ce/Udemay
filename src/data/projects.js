@@ -13,7 +13,7 @@ const PROJECTS =[
     {   
         id:2,
         title:'recruit me bro',
-        description:'A vanilla js app with recruitment quest?',
+        description:'A vanilla js app with recruitment test?',
         link:'https://github.com/m4t1ce/zadanieRekru',
         image:project2
     },
